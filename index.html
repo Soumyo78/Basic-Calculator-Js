@@ -3,33 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/GNOME_Calculator_icon_2018.svg/768px-GNOME_Calculator_icon_2018.svg.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
     <title>Basic Calculator</title>
 </head>
-<body>
-    <div class="inputs">
-        <span class="first_num">
-            <label for="first num">1st Number</label>
-            <input id="f_num" type="number" >
-        </span>
-        <span class="second_num">
-            <label for="second num">1st Number</label>
-            <input id="s_num" type="number" >
-        </span>
-    </div>
-    <br>
-    <div class="operators">
-        <label for="operator">Choose any operation</label>
-        <select name="operators" id="select_op">
-            <option id="plus" value="plus">+</option>
-            <option id="minus" value="minus">-</option>
-            <option id="divide" value="divide">/</option>
-            <option id="product" value="product">*</option>
-        </select>
-    </div>
-    <br>
-    <div class="calculate">
-        <button id="calculate-btn" class="cal-btn">Calculate</button>
-        <p id="result"></p>
+<body id="canvas">
+    <div class="calculator-body">
+        <div class="input-box-container">
+            <input id="input-box" type="text" value="" disabled>
+        </div>
+        <div class="num-pad">
+            <div class="num-pad-1-2">
+                <div class="num-pad-1">
+                    <button id="btn-%">%</button>
+                    <button id="btn-/">/</button>
+                    <button id="btn-*">*</button>
+                    <button id="btn-7">7</button>
+                    <button id="btn-8">8</button>
+                    <button id="btn-9">9</button>
+                    <button id="btn-4">4</button>
+                    <button id="btn-5">5</button>
+                    <button id="btn-6">6</button>
+                    <button id="btn-1">1</button>
+                    <button id="btn-2">2</button>
+                    <button id="btn-3">3</button>
+                </div>
+                <div class="num-pad-2">
+                    <button id="btn-0">0</button>
+                    <button id="btn-dot">.</button>
+                </div>
+            </div>
+            <div class="num-pad-3">
+                <button id="btn-minus">-</button>
+                <button id="btn-plus">+</button>
+                <button id="btn-eql">=</button>
+            </div>
+            <div class="num-pad-4">
+                <button id="btn-c">C</button>
+                <button id="btn-ac">AC</button>
+                <button id="btn-(">(</button>
+                <button id="btn-)">)</button>
+                <button id="btn-PlsOrMins">+/-</button>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
