@@ -96,43 +96,37 @@ document.getElementById('btn-*').addEventListener("click", () =>{
     document.getElementById('input-box').value = num2;
 })
 
+document.getElementById('btn-(').addEventListener("click", () =>{
+    var num1 = document.getElementById('input-box').value;
+    var num1 = num1.toString();
+    num2 = num1 + "(";
+    document.getElementById('input-box').value = num2;
+})
+
+document.getElementById('btn-)').addEventListener("click", () =>{
+    var num1 = document.getElementById('input-box').value;
+    var num1 = num1.toString();
+    num2 = num1 + ")";
+    document.getElementById('input-box').value = num2;
+})
+
+document.getElementById('btn-%').addEventListener("click", () =>{
+    var num1 = document.getElementById('input-box').value;
+    var num1 = num1.toString();
+    num2 = num1 + "*(1/100)";
+    document.getElementById('input-box').value = num2;
+})
+
+document.getElementById('btn-c').addEventListener("click", () =>{
+    var num1 = document.getElementById('input-box').value;
+    var num1 = num1.toString();
+    num2 = num1.slice(0, -1);
+    document.getElementById('input-box').value = num2;
+})
+
 document.getElementById('btn-eql').addEventListener("click", () =>{
     var a = document.getElementById('input-box').value;
-    var b = a.split(/[+-/*]/);
-
-    for(var i=0; i<b.length; i++){
-        b[i] = parseInt(b[i], 10);
-    }
-    
-    if(/\+/.test(a)){
-        var result = b.reduce(function(x, y){
-            return x+y;
-        }, 0)
-    }
-
-    if(/\-/.test(a)){
-        var result = b.reduce(function(x, y){
-            console.log(x);
-            console.log(y);
-            return (-x)-(y);
-        }, 0);
-    }
-
-    if(/\*/.test(a)){
-        var result = b.reduce(function(x, y){
-            return x*y;
-        }, 1);
-    }
-
-    if(/\//.test(a)){
-        var result = b.reduce(function(x, y){
-            return x/y;
-        },);
-    }
-
-    console.log(result);
-
-
+    var result = eval(a);
     document.getElementById('input-box').value = result;
 })
 

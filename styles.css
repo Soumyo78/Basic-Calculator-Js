@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
 #canvas{
     background-color: aquamarine;
 }
@@ -9,6 +11,14 @@
     text-align: end;
     font-size: x-large;
     background-color: rgb(89, 155, 98);
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    padding-right: 2px;
+    padding-right: 2px;
+}
+
+::placeholder{
+    color: white;
 }
 
 .num-pad{
